@@ -2,7 +2,7 @@
 Example setup of llamaindex + chatgpt
 
 1. ) Run ```pip install -r requirements.txt``` to install dependencies.
-2. <br>
+2. <br></br>
 3. ) Create an account on OpenAI and create an API key.
 4. <br>
 5. ) Set the **AKEY** parameter in the *config_file.py* file to your created API key.
