@@ -5,7 +5,7 @@ Example setup of llamaindex + chatgpt
  <br></br>
 2. Create an account on OpenAI and create an API key.
  <br></br>
-3. Set the **AKEY** parameter in the *config_file.py* file to your created API key.
+3. Set the **AKEY** parameter in the *config_file.py* file to your created API key. Or alternatively you can save the key to a JSON file and link that file through the 
  <br></br>
 4. Set the **PATH_TO_FOLDER_TO_INDEX** parameter to point to the folder / directory you'd like to index.  Save the config file.
  <br></br>
