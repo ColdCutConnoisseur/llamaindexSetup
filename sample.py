@@ -11,7 +11,10 @@ def index_documents(reference_folder_path, index_save_file):
        drive folder vs. using a collab notebook (setting up google dev project).
     """
     print("Reading and loading documents in folder...")
-    reference_documents = SimpleDirectoryReader(reference_folder_path).load_data()
+    reference_documents = SimpleDirectoryReader(reference_folder_path, errors='ignore')
+    for d in reference_documents:
+        print(d)
+    reference_documents = reference_documents.load_data()
     print("Documents loaded!")
 
     # Construct the index from documents
@@ -58,9 +61,9 @@ if __name__ == "__main__":
     os.environ['OPENAI_API_KEY'] = cf.AKEY
 
     REFERENCE_FOLDER_PATH = cf.PATH_TO_FOLDER_TO_INDEX # This is the path to your drive reference folder
-    INDEX_SAVE_FILE = "TBG_index.json"
+    INDEX_SAVE_FILE = cf.INDEX_SAVE_PATH
 
-    EXAMPLE_QUERY = "Which is the largest Egyptian pyramid?"
+    EXAMPLE_QUERY = "What is the diet of slender toads?"
 
     sample_response = execute_query_and_return_response(REFERENCE_FOLDER_PATH, INDEX_SAVE_FILE, EXAMPLE_QUERY)
 
